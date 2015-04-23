@@ -6,6 +6,6 @@ dependencies:
     - docker build -t mongodb .
 test:
   override:
-    - docker run --name mongodb_container -d mongodb; sleep 30
+    - docker run --name mongodb_container -d mongodb; sleep 10
     - mongo --eval "db.stats();" --host localhost --port 27017
 
